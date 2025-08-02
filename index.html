@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Number Guessing Game</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>🎮 Number Guessing Game</h1>
+  <div class="game-container">
+    <h1>🎯 Number Guessing Game</h1>
     <p>Guess a number between 1 and 100</p>
+    
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Submit</button>
 
-    <form method="POST">
-        <input type="number" name="guess" required>
-        <button type="submit">Submit Guess</button>
-    </form>
+    <p id="message"></p>
+    <p id="attempts"></p>
+    <button onclick="resetGame()">Restart</button>
+  </div>
 
-    <p>{{ message }}</p>
+  <script src="script.js"></script>
 </body>
 </html>
